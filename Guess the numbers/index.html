@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+var number;
+
+function start(){
+	number = Math.floor(Math.random()*1000000+1);
+	document.getElementById("title").innerHTML="請猜1~1000000的數字";
+}
+function 猜(){
+	var player_number = document.getElementById("msg").value;
+	if(player_number==number){
+		document.getElementById("title").innerHTML="你猜中了";
+	}else if(player_number>number){
+		document.getElementById("owo").value = "沒猜中,數字比較小";
+	}else if(player_number<number){
+		document.getElementById("owo").value = "沒猜中,數字比較大";
+	}	
+}
+</script>
+</head>
+<body>
+<h1 id="title">請按開始</h1>
+<input type="text" id="msg">
+<input type="button" id="owo" onclick="猜()" value="確定"/>
+<button onclick="start()">開始</button>
+</body>
+</html>
