@@ -14,17 +14,16 @@ td{
 var player = "O";
 var tmp;
 function play(id){
-var a1 = document.getElementById("a1"),
-    a2 = document.getElementById("a2"),
-    a3 = document.getElementById("a3"),
-    b1 = document.getElementById("b1"),
-    b2 = document.getElementById("b2"),
-    b3 = document.getElementById("b3"),
-    c1 = document.getElementById("c1"),
-    c2 = document.getElementById("c2"),
-    c3 = document.getElementById("c3");
+    var a1 = document.getElementById("a1"),
+        a2 = document.getElementById("a2"),
+        a3 = document.getElementById("a3"),
+        b1 = document.getElementById("b1"),
+        b2 = document.getElementById("b2"),
+        b3 = document.getElementById("b3"),
+        c1 = document.getElementById("c1"),
+        c2 = document.getElementById("c2"),
+        c3 = document.getElementById("c3");
     if(document.getElementById(id).innerText==""){
-        console.log(id);
         document.getElementById(id).innerText=player;
 
 
@@ -34,43 +33,44 @@ var a1 = document.getElementById("a1"),
                     a1.style.background = "red";
                     a2.style.background = "red";
                     a3.style.background = "red";
+                    document.body.innerText=(player+" 玩家贏了");
                 }
             }else if(b2.innerText==player){
                 if(c3.innerText==player){
                     a1.style.background = "red";
                     b2.style.background = "red";
                     c3.style.background = "red";
-                    console.log(player+" 玩家贏了");
+                    document.body.innerText=(player+" 玩家贏了");
                 }
             }else if(b1.innerText==player){
                 if(c1.innerText==player){
                     a1.style.background = "red";
                     b1.style.background = "red";
                     c1.style.background = "red";
-                    console.log(player+" 玩家贏了");
+                    document.body.innerText=(player+" 玩家贏了");
                 }
             }
         }else if(a3.innerText==player){
             if(b3.innerText==player){
                 if(c3.innerText==player){
-                    console.log(player+"玩家贏了");
+                    document.body.innerText=(player+"玩家贏了");
                 }
             }else if(b2.innerText==player){
                 if(c1.innerText==player)
-                    console.log(player+"玩家贏了");
+                    document.body.innerText=(player+"玩家贏了");
             }
         }else if(a2.innerText==player){
             if(b2.innerText==player)
                 if(c2.innerText==player)
-                    cosnole.log(player+" 玩家贏了")
+                    document.body.innerText=(player+" 玩家贏了")
         }else if(c1.innerText==player){
             if(c3.innerText==player)
                 if(c2.innerText==player)
-                    cosnole.log(player+" 玩家贏了")
+                    document.body.innerText=(player+" 玩家贏了")
         }else if(b1.innerText==player){
             if(b2.innerText==player)
                 if(b3.innerText==player)
-                    cosnole.log(player+" 玩家贏了")
+                    document.body.innerText=(player+" 玩家贏了")
         }
 
 
