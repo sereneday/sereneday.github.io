@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+function reverse(){
+    var text=document.getElementById("msg").value;//宣告text=有個id為"text"的內容
+    text = text.split("").reverse().join("");
+    console.log(text);
+    
+    document.getElementById("msg").value=text;
+}
+</script>   
+</head>
+<body>
+<script></script>
+<input type="text" id="msg" value="123">
+<button onclick="reverse()">確認</button>
+</body>
+</html>
